@@ -1,7 +1,6 @@
 // argument config is a number
 // exmaple: node index.js --config=1
 const { argv } = require('yargs');
-console.log(argv);
 const { config } = argv;
 console.log(`🚀 Starting miner with config #${config}`);
 const result = require('dotenv').config({ path: `.env${config}` });

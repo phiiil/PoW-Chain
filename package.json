@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "miners": "concurrently \"nodemon server/index.js 1\" \"nodemon server/index.js 2\" ",
+    "miners": "concurrently \"nodemon server/index.js --config=1\" \"nodemon server/index.js --config=2\" ",
     "server": "nodemon index.js --config=1",
     "client": "parcel client/index.html",
     "dev": "concurrently \"nodemon server/index.js\" \"parcel client/index.html\" "
