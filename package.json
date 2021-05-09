@@ -4,22 +4,24 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "nodemon server/index.js",
+    "miners": "concurrently \"nodemon server/index.js 1\" \"nodemon server/index.js 2\" ",
+    "server": "nodemon index.js --config=1",
     "client": "parcel client/index.html",
     "dev": "concurrently \"nodemon server/index.js\" \"parcel client/index.html\" "
   },
   "dependencies": {
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
+    "dotenv": "^5.0.1",
     "elliptic": "^6.5.3",
     "express": "^4.17.1",
     "jayson": "^3.3.3",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "sass": "^1.26.10",
     "concurrently": "^6.0.2",
     "nodemon": "^2.0.7",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.26.10"
   }
 }
